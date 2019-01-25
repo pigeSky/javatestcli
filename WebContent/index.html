@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			label {width: 100px;text-align: center;display: inline-block}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<div>
+				<label for="">用户名：</label>
+				<input type="text" name="username" id="username">
+			</div>
+			<div>
+				<label for="">密码：</label>
+				<input type="text" name="password" id="password">
+			</div>
+		</form>
+		<div>
+			<button id="submit">提交</button>
+		</div>
+
+		<script type="text/javascript" src="javascript/jquery.min.js"></script>
+		<script type="text/javascript">
+			$("#submit").click(function() {
+				$.ajax({
+					type: "get",
+					url: "./HelloWorld",
+					success: function(data) {
+						console.log(data)
+					}
+				});
+			})
+		</script>
+
+	</body>
+
+</html>
